@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Styles.css">
+
+    <title>Contact Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .main-page{
+            width: 100%;
+            height: 100vh;
+            background: url(Images/Contact-Image.jpg) no-repeat center;
+            background-size: cover;
+        }
+        .contact-page{
+          padding-left: 40px;
+          color: #fff;
+          letter-spacing: 0.2rem;
+        }
+        .details{
+          margin-top: 20px;
+          padding: 10px 5px;
+          background: #222A33CC;
+        }
+        .contact-page h1{
+          font-size: 28px;
+        }
+        .contact-page h3{
+          margin: 10px 0;
+          font-size: 24px;
+        }
+        .heading h1{
+          font-size: 42px;
+        }
+        .contact-page{
+          display: grid;
+          grid-template-columns: auto auto;
+        }
+        .underline{
+          margin-bottom: 0;
+        }
+        .left{
+          width: 80%;
+        }
+        .right{
+          padding: 20px 30px;
+          background: #222A33CC;
+          width: 100%;
+          margin-top: 40px;
+          margin-left: -100px;
+          /* background: r  ed; */
+        }
+        .form-label{
+          font-size: 30px;
+        }
+
+        /* Media Query */
+        .fixed-top{
+          background: black;
+        }
+        @media screen and (max-width: 1256px) {
+            .right-nav{
+                display: none;
+            }
+            .right-nav{
+                display: none;
+            }
+            .left-nav{
+                margin-left: -65px;
+            }
+            .left-nav img{
+                width: 250px;
+                height: 60px;
+            }
+            .contact-page{
+              display: grid;
+              grid-template-columns: auto;
+            }
+            .left{
+              display: none;
+            }
+            .right{
+              width: 80%;
+              margin-left: 0;
+              padding: 10px 10px;
+            }
+            .form-label{
+              font-size: 20px;
+            }
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div class="main-page">
+    <div id="top-nav" class="top-nav">
+        <div class="left-nav">
+            <img src="http://world5.commonsupport.com/html/volunteer/images/logo.png" alt="logo">
+        </div>
+        <ul class="right-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li id="donate"><a href="donatepage.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="contact-page">
+        <div class="left">
+          <div class="heading">
+            <h1>Contact Us</h1>
+            <div class="underline"></div>
+          </div>
+          <div class="details">
+            <h1>Name</h1>
+            <h3>V Yeshwanth</h3>
+          </div>
+          <div class="details">
+            <h1>Email-Id</h1>
+            <h3>vyeshwanth241200@gmail.com</h3>
+          </div>
+          <div class="details">
+            <h1>GitHub</h1>
+            <h3>https://github.com/V-Yeshwanth</h3>
+          </div>
+          <div class="details">
+            <h1>LinkedIn</h1>
+            <h3>https://www.linkedin.com/in/v-yeshwanth-b872a31b7</h3>
+          </div>
+        </div>
+        <div class="right">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email-Id</label>
+              <input type="email" class="form-control">
+            </div><div class="mb-3">
+              <label class="form-label">Contact No</label>
+              <input type="text" class="form-control">
+            </div><div class="mb-3">
+              <label class="form-label">Query</label>
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+    </div>
+
+    </div>
+    <footer>
+      <div class="container">
+          <div class="col-md-12 text-center">
+          <p>
+              Copyright &copy; Indian Banking Services Ltd.
+              <span id="date">1990</span>
+              all rights reserved
+          </p>
+          </div>
+          <h3 class="text-muted">Coded By: <i>V Yeshwanth</i></h3>
+      </div>
+  </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script>
+      // Fixed-top
+      const x = document.getElementById('top-nav');
+          window.addEventListener('scroll', function(){
+              const value = window.scrollY;
+              if(value >= 133){
+                  x.classList.add('fixed-top');
+              } else {
+                  x.classList.remove('fixed-top');
+              }
+          });
+
+  </script>
+  </body>
+</html>
